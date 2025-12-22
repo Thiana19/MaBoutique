@@ -17,13 +17,10 @@ A modern, full-stack e-commerce mobile application built with Flutter and FastAP
 - [Screenshots](#-screenshots)
 - [Architecture](#-architecture)
 - [Installation](#-installation)
-- [Configuration](#-configuration)
 - [Running the Application](#-running-the-application)
 - [API Documentation](#-api-documentation)
 - [Project Structure](#-project-structure)
 - [Security Features](#-security-features)
-- [Contributing](#-contributing)
-- [License](#-license)
 
 ---
 
@@ -175,17 +172,6 @@ The splash screen provides a branded entry point with smooth animations, while t
   - Proceed to checkout button
   - Address selection
   - Payment method integration ready
-
-**Backend Cart Logic:**
-```python
-# Automatic calculation of:
-- Subtotal per item (price × quantity)
-- Cart subtotal (sum of all items)
-- Discounts (percentage or fixed amount)
-- Shipping fees (based on location/weight)
-- Tax (based on jurisdiction)
-- Final total
-```
 
 ### Wishlist
 
@@ -358,58 +344,6 @@ flutter pub get
 ```bash
 flutter pub run build_runner build
 ```
-
----
-
-## ⚙️ Configuration
-
-### Backend Configuration
-
-Create a `.env` file in the backend directory:
-
-```env
-# Database
-DATABASE_URL=sqlite:///./maboutique.db
-
-# JWT Configuration
-SECRET_KEY=your-super-secret-key-change-this-in-production
-ALGORITHM=HS256
-ACCESS_TOKEN_EXPIRE_MINUTES=1440
-
-# Server Configuration
-HOST=127.0.0.1
-PORT=8000
-
-# CORS
-ALLOWED_ORIGINS=http://localhost:*,http://127.0.0.1:*
-```
-
-### Frontend Configuration
-
-Update `lib/config/api_config.dart`:
-
-```dart
-class ApiConfig {
-  // Android Emulator
-  static const String baseUrl = 'http://10.0.2.2:8000';
-  
-  // iOS Simulator
-  // static const String baseUrl = 'http://127.0.0.1:8000';
-  
-  // Physical Device (replace with your computer's IP)
-  // static const String baseUrl = 'http://YOUR_LOCAL_IP:8000';
-  
-  static const String apiVersion = '/api';
-  static const Duration timeout = Duration(seconds: 30);
-}
-```
-
-**Network Configuration Tips:**
-- **Android Emulator**: Use `10.0.2.2` to access localhost
-- **iOS Simulator**: Use `127.0.0.1` or `localhost`
-- **Physical Device**: Use your computer's local IP address
-  - Find your IP: `ipconfig` (Windows) or `ifconfig` (macOS/Linux)
-  - Ensure device and computer are on same network
 
 ---
 
@@ -634,40 +568,3 @@ maboutique/
 ✅ SQL injection prevention through ORM  
 ✅ XSS protection through input sanitization  
 
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 👨‍💻 Author
-
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Name](https://linkedin.com/in/yourprofile)
-
----
-
-## 🙏 Acknowledgments
-
-- Flutter team for the amazing framework
-- FastAPI for the modern Python web framework
-- All open-source contributors
-
----
-
-**Made with ❤️ using Flutter & FastAPI**
