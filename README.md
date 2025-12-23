@@ -212,22 +212,20 @@ The splash screen provides a branded entry point with smooth animations, while t
 - **Order Management**:
   - Order history
   - Track current orders
-  - Reorder functionality
-  - Download invoices
 - **Settings**:
   - Theme preference (Dark/Light/System)
   - Notification preferences
-  - Language selection
-  - Currency selection
+  - Language selection (Coming Soon)
+  - Currency selection (Coming Soon)
 - **Support**:
   - Help center access
   - Contact support
-  - FAQ section
-  - Terms and privacy policy
+  - FAQ section (Coming Soon)
+  - Terms and privacy policy (Coming Soon)
 - **Account Actions**:
-  - Change password
+  - Change password (Coming Soon)
   - Logout
-  - Delete account
+  - Delete account (Coming Soon)
 
 ---
 
